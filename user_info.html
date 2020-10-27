@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="user_info.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>user info</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="task1.html">
+                <img src="logo.png" alt="" style="height: 50px; width: 100px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="About_us.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Amount.html">Amount</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="current" href="user_info.html">User Info</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Careers</a>
+                  </li>
+              </ul>
+              <div style="float: right;">
+                <button type="submit" class="btn btn-primary"><span class="fa fa-user"></span></button>
+                <button type="submit" class="btn btn-primary"><span class="fa fa-search"></span></button>
+                <button type="submit" class="btn btn-primary"><span class="fa fa-shopping-cart"></span></button>
+              </div>
+            </div>
+          </nav> 
+
+          <div class="formal">
+            <form class="form-horizontal">
+                <input type='hidden' name='csrfmiddlewaretoken' value='brGfMU16YyyG2QEcpLqhb3Zh8AvkYkJt' />
+                <div class="form-group required">
+                   <label class="col-md-2 control-label">Username</label>
+                   <div class="col-md-4">
+                     <input class="form-control" id="id_username" minlength="3" maxlength="10" name="username" placeholder="Username" required="required" title="" type="text" />
+                   </div>
+                </div>
+
+                <div class="form-group required">
+                    <label class="col-md-2 control-label">Email</label>
+                    <div class="col-md-4">
+                      <input class="form-control" id="id_email" maxlength="30" name="email" placeholder="Email" required="required" title="" type="email" />
+                    </div>
+                 </div>
+
+                 <div class="form-group required">
+                    <label class="col-md-2 control-label">Mobile</label>
+                    <div class="col-md-4">
+                      <input class="form-control" id="id_mobile" maxlength="10" name="mobile" placeholder="Mobile" required="required" title="" type="number" />
+                    </div>
+                 </div>
+
+
+                <div class="form-group.required"><label class="col-md-2 control-label">Location</label><div class="col-md-4"><input class="form-control" id="id_location" name="location" placeholder="location" required="required" title="" type="text" /></div></div>
+                <div class="form-group.required"><label class="col-md-2 control-label";>Rating</label>
+                  <select class="form-control" id="sel1" style="max-width: 420px; margin-left: 20px;">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+                </div>
+                <div class="form-group.required"><label class="col-md-2 control-label">Suggestion</label><div class="col-md-4"><input class="form-control" id="id_suggestion" name="suggestion" placeholder="suggestion" required="required" title="" type="" /></div></div>
+
+
+
+                
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                     <button type="button" onclick="showInput();" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-star"></span> Sign Me Up!
+                     </button>
+                  </div>
+              </div>
+
+            </form>
+          </div>
+
+          <div class="jumbotron">
+            <div class="row justify-content-center" id="result">
+              <h2>Your Details</h2><br>
+            </div>
+            <div class="row justify-content-center">
+              <h6>>Username :&nbsp <span id='display'></span></h6>
+            </div>
+            <div class="row justify-content-center">
+              <h6>Email :&nbsp<span id='display1'></span>
+            </div>
+            <div class="row justify-content-center">
+              <h6>Mobile :&nbsp<span id='display2'></span></h6>
+            </div>
+            <div class="row justify-content-center">
+              <h6>Rating :&nbsp<span id='display3'></span></h6>
+            </div>
+            <div class="row justify-content-center">
+              <h6>Suggestion :&nbsp<span id='display4'></span></h6>
+            </div>
+
+            
+          </div>
+
+        
+           <!-- Footer -->
+	<section id="footer">
+		<div class="container-fluid">
+            <div class="row justify-content-center">
+                <ul class="list-unstyled list-inline social text-center" style="padding-top: 25px;">
+                    <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-instagram"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-google-plus"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+            </div>
+				
+		</div>
+	</section>
+	<!-- ./Footer -->
+
+
+
+
+        
+
+
+
+
+
+
+    </body>
+
+
+    <script language="JavaScript">
+      function showInput() {
+          document.getElementById('display').innerHTML = 
+                      document.getElementById("id_username").value;
+          document.getElementById('display1').innerHTML = 
+                      document.getElementById("id_email").value;
+          document.getElementById('display2').innerHTML = 
+                      document.getElementById("id_mobile").value;
+          document.getElementById('display3').innerHTML = 
+                      document.getElementById("sel1").value;
+          document.getElementById('display4').innerHTML = 
+                      document.getElementById("id_suggestion").value;
+      }
+    </script>
+</html>

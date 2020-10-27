@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="task1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>task1</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="task1.html">
+                <img src="logo.png" alt="" style="height: 50px; width: 100px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                
+                <li class="nav-item">
+                    <a class="nav-link" id="current" href="task1.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="About_us.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Amount.html">Amount</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="user_info.html">User Info</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Careers</a>
+                  </li>
+              </ul>
+              <div style="float: right;">
+                <button type="submit" class="btn btn-primary"><span class="fa fa-user"></span></button>
+                <button type="submit" class="btn btn-primary"><span class="fa fa-search"></span></button>
+                <button type="submit" class="btn btn-primary"><span class="fa fa-shopping-cart"></span></button>
+              </div>
+            </div>
+          </nav> 
+        
+          <div class="container-fluid">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                  <li data-target="#demo" data-slide-to="0" class="active"></li>
+                  <li data-target="#demo" data-slide-to="1"></li>
+                  <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+              
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="item1.jpg" alt="Los Angeles" style="max-height: 500px; width: 100%;">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="item2.jpg" alt="Chicago" style="max-height: 500px; width: 100%;">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="item3.jpg" alt="New York" style="max-height: 500px; width: 100%;">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="item4.jpg" alt="Chicago" style="max-height: 500px; width: 100%;">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="item5.jpg" alt="Chicago" style="max-height: 500px; width: 100%;">
+                  </div>
+                </div>
+              
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </a>
+              
+              </div>
+          </div>
+
+          <div class="container-fluid" style="padding-top: 10px; padding-bottom: 10px;">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="container">
+                    <h1>We are in<br></h1>
+                    <marquee behavior="scroll" direction="up">
+                        <h4>Hyderabad<br></h4>
+                        <h4>Mumbai <br></h4>
+                        <h4>Visakapatnam <br></h4>
+                        <h4>Pune <br></h4>
+                    </marquee>
+                </div>
+              </div>
+
+              <div class="col-sm-9">
+                  <h1>Todays Special</h1>
+                  <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="row" style="justify-content: space-evenly;">
+                            <div class="col-sm-3" >
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                      <div class="flip-card-front">
+                                        <img src="biryani.jpg" alt="Avatar" style="width:300px;height:300px;">
+                                      </div>
+                                      <div class="flip-card-back">
+                                        <h1>Biryani</h1> 
+                                        <p>Extra Spicy</p> 
+                                        <p>Rs 299 only</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+    
+                            <div class="col-sm-3">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                      <div class="flip-card-front">
+                                        <img src="mixed.jpg" alt="Avatar" style="width:300px;height:300px;">
+                                      </div>
+                                      <div class="flip-card-back">
+                                        <h1>Mixed Curry</h1> 
+                                        <p>Extra Spicy</p> 
+                                        <p>Rs 99 only</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+    
+                            <div class="col-sm-3">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                      <div class="flip-card-front">
+                                        <img src="samosa.jpg" alt="Avatar" style="width:300px;height:300px;">
+                                      </div>
+                                      <div class="flip-card-back">
+                                        <h1>Samosa</h1> 
+                                        <p>Extra Spicy</p> 
+                                        <p>From 29 only</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+                  </div>
+                    </div>
+
+                  </div>
+               </div>
+            </div>
+          </div>
+
+
+
+          <!-- Footer -->
+	<section id="footer">
+		<div class="container-fluid">
+            <div class="row justify-content-center">
+                <ul class="list-unstyled list-inline social text-center" style="padding-top: 25px;">
+                    <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-instagram"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-google-plus"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+            </div>
+				
+		</div>
+	</section>
+	<!-- ./Footer -->
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+
+   
+</html>
