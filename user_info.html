@@ -63,6 +63,8 @@
                 <td><input  class="form" type="text" id="user" placeholder="Username">
                   <br>
                   <span><small id="errormsg" class="error" style="color: red"></small></span>
+                  <br>
+                  <span><small id="errormsg5" class="error" style="color: red"></small></span>
                 </td>
               </tr>
               <tr>
@@ -70,7 +72,7 @@
                 <label>Email<span class="man" style="color: red;">*</span>:</label></td>
                 <td>
                 <input  class="form" type="Email" id="email" placeholder="Email"><br>
-                <span><smallid="errormsg1" class="error" style="color: red"></small></span>
+                <span><small id="errormsg1" class="error" style="color: red"></small></span>
             </td>
                 </tr>
                 <tr>
@@ -217,12 +219,14 @@
           }
                   if(user.length>10)
                   {
-                       document.getElementById("errormsg").innerHTML="Username must occupy minimum 3 to maximum 5 fields";
+                       document.getElementById("errormsg").innerHTML="Username must be minimum 3";
+                       document.getElementById("errormsg5").innerHTML="to maximum 5 fields";
                   }
                   else
           {
     
-                 document.getElementById("errormsg").innerHTML="Username must occupy minimum 3 to maximum 5 fields";
+                       document.getElementById("errormsg").innerHTML="Username must be minimum 3";
+                       document.getElementById("errormsg5").innerHTML="to maximum 5 fields";
                   }
     
                   flag=0;
