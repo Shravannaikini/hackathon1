@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="user_info.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>user info</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="task1.html">
+                <img src="logo.png" alt="" style="height: 50px; width: 100px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="About_us.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Amount.html">Amount</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="current" href="user_info.html">User Info</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Careers</a>
+                  </li>
+              </ul>
+              <div style="float: right;">
+                <button type="submit" class="btn btn-primary"><span class="fa fa-user"></span></button>
+                <button type="submit" class="btn btn-primary"><span class="fa fa-search"></span></button>
+                <button type="submit" class="btn btn-primary"><span class="fa fa-shopping-cart"></span></button>
+              </div>
+            </div>
+          </nav>
+          
+          
+        <div class="row justify-content-center">
+
+          <form>
+            <fieldset>
+            
+              <table>
+                <tr>
+              <td><label> Username:<span class="man">*</span>:</label></td>
+              <td><input  class="form" type="text" id="iduser" placeholder="Username">
+                <br>
+                <p id="warning1" class="error" style="color: red"></p>
+              </td>
+            </tr>
+            <tr>
+            <td>
+              <label>Mailid<span class="man">*</span>:</label></td>
+              <td>
+              <input  class="form" type="Email" id="idemail" placeholder="Email"><br>
+             <p id="warning2" class="error" style="color: red"></p>
+          </td>
+              </tr>
+              <tr>
+                <td>
+              <label>Mobile<span class="man">*</span>:</label></td>
+              <td><input class="form" type="number" id="idnumber" placeholder="Mobile">
+               <br>
+               <p id="warning3" class="error" style="color:red"></p>
+              </td>
+              </tr>
+              <tr>
+                <td>
+              <label>Location:</label></td>
+              <td>
+              <input class="form" id="idlocation" type="text" placeholder="Location">
+              </td>
+            </tr>
+               
+              <tr>
+                <td>
+              <label>Rating:</label></td>
+               <td>
+                <select class="idrating"  name="Please rate" id="idrating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+              <option value="5">5</option>
+          </select>
+               </td>
+             </tr>
+             <tr>
+               <td><label>Suggestion</label></td>
+               <td> <textarea class="commtext" id="idsuggestion" name="w3review" rows="1" >
+          
+          </textarea></td>
+             </tr>
+          </table>
+              
+          <button type="button" onclick="validate()" class="btn btn-primary">
+            <span></span> Sign Me Up!
+         </button>
+          
+               
+        </fieldset>
+          </form>
+        </div>
+        <div class="col-0 col-sm-2">
+          </div>
+        </div>
+        </div>
+        
+        <div class="container">
+          <div class="row result">
+            <div class="col-0 col-sm-2">
+          </div>
+          <div class="col-12 col-sm-8" id="result">
+          <h4 style="color: white">Added details:</h4>
+          <table class="resulttable">
+            <tr>
+              <td><label>Username :</label></td>
+              <td><label id="display1"></label></td>
+            </tr>
+            <tr>
+              <td><label>Email :</label></td>
+              <td><label id="display2"></label></td>
+            </tr>
+            <tr>
+              <td><label>Mobile :</label></td>
+              <td><label id="display3"></label></td>
+            </tr>
+            <tr>
+              <td><label>Location :</label></td>
+              <td><label id="display4"></label></td>
+            </tr>
+            <tr>
+              <td><label>Rating :</label></td>
+              <td><label id="display5"></label></td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-0 col-sm-2">
+        </div>
+        </div>
+        </div>
+        </div>
+             
+
+
+
+
+
+        
+           <!-- Footer -->
+	<section id="footer">
+		<div class="container-fluid">
+            <div class="row justify-content-center">
+                <ul class="list-unstyled list-inline social text-center" style="padding-top: 25px;">
+                    <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li class="list-inline-item"><a href="#" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+            </div>
+				
+		</div>
+	</section>
+	<!-- ./Footer -->
+
+
+
+  
+        
+
+
+
+
+
+
+    </body>
+
+    <script>
+      function validate()
+      {
+           
+           let var_user=document.getElementById("iduser").value;
+           let var_email=document.getElementById("idemail").value;
+           let var_number=document.getElementById("idnumber").value;
+           let var_location=document.getElementById("idlocation").value;
+           let var_rating=document.getElementById("idrating").value;
+           let var_suggestion=document.getElementById("idsuggestion").value; 
+    
+           
+           let flag=1;
+    
+           if (var_user.length==0){
+            document.getElementById("warning").innerHTML="Username cannot be empty";
+           }
+           if(var_user.length>10) {
+            document.getElementById("warning").innerHTML="Username must contain minimum 4 fields to maximum 10 fields";
+           }
+           if(var_user.length<3) {
+            document.getElementById("warning").innerHTML="Username must contain minimum 4 fields to maximum 10 fields";
+           }
+
+           
+
+  
+            
+            if(flag==1)
+            {
+              document.getElementById("result").style.display="block";
+            
+        document.getElementById("display1").innerHTML=var_user;
+        document.getElementById("display2").innerHTML=var_email;
+        document.getElementById("display3").innerHTML=var_number;
+        document.getElementById("display4").innerHTML=var_location;
+        document.getElementById("display5").innerHTML=var_rating;
+        
+    
+      }}
+    </script>
+
+
+    
+</html>
