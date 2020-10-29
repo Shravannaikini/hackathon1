@@ -62,7 +62,7 @@
                 <td><label> Username:<span class="man" style="color: red;">*</span>:</label></td>
                 <td><input  class="form" type="text" id="user" placeholder="Username">
                   <br>
-                  <p id="errormsg" class="error" style="color: red"></p>
+                  <span><small id="errormsg" class="error" style="color: red"></small></span>
                 </td>
               </tr>
               <tr>
@@ -70,7 +70,7 @@
                 <label>Email<span class="man" style="color: red;">*</span>:</label></td>
                 <td>
                 <input  class="form" type="Email" id="email" placeholder="Email"><br>
-               <p id="errormsg1" class="error" style="color: red"></p>
+                <span><smallid="errormsg1" class="error" style="color: red"></small></span>
             </td>
                 </tr>
                 <tr>
@@ -78,7 +78,7 @@
                 <label>Mobile<span class="man" style="color: red;">*</span>:</label></td>
                 <td><input class="form" type="number" id="number" placeholder="Mobile">
                  <br>
-                 <p id="errormsg2" class="error" style="color:red"></p>
+                 <span><small id="errormsg2" class="error" style="color:red"></small></span>
                 </td>
                 </tr>
                 <tr>
@@ -185,88 +185,6 @@
 	</section>
 	<!-- ./Footer -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <script>
-    function validate()
-    {
-         
-         let user=document.getElementById("user").value, email=document.getElementById("email").value,number=document.getElementById("number").value, location=document.getElementById("location").value, rating=document.getElementById("rating").value ;
-  
-      let flag=1;
-  
-      if((user.length>=3)&&(user.length<=10))
-      {
-        flag=1;
-      }
-      else
-      {
-        if(user.length==0)
-        {
-                  
-                  document.getElementById("errormsg").innerHTML="Username cannot be empty";
-        }
-                if(user.length>10)
-                {
-                     document.getElementById("errormsg").innerHTML="Username must occupy minimum 3 to maximum 5 fields";
-                }
-                else
-        {
-  
-               document.getElementById("errormsg").innerHTML="Username must occupy minimum 3 to maximum 5 fields";
-                }
-  
-                flag=0;
-        // alert("invalid user email");
-      }
-      if(email.match(/[@]/g))
-      {
-        flag=1;
-      }
-      else
-      {
-        flag=0;
-        document.getElementById("errormsg1").innerHTML="Not a valid email address";
-        // alert("invalid user email");
-      }
-      if((number.match(/[0-9]/g))&&(number.length==10))
-      {
-        flag=1;
-      }
-      else
-      {
-        flag=0;
-        document.getElementById("errormsg2").innerHTML="Not a valid mobile number";
-        // alert("invalid number");
-      }
-  
-    
-   
-          
-          if(flag==1)
-          {
-            document.getElementById("result").style.display="block";
-          
-      document.getElementById("user1").innerHTML=user;
-      document.getElementById("email1").innerHTML=email;
-      document.getElementById("number1").innerHTML=number;
-      document.getElementById("location1").innerHTML=location;
-      document.getElementById("rating1").innerHTML=rating;
-  
-    }}
-  </script>
   
         
 
@@ -277,6 +195,75 @@
 
     </body>
 
+
+    <script>
+      function validate()
+      {
+           
+           let user=document.getElementById("user").value, email=document.getElementById("email").value,number=document.getElementById("number").value, location=document.getElementById("location").value, rating=document.getElementById("rating").value ;
+    
+        let flag=1;
+    
+        if((user.length>=3)&&(user.length<=10))
+        {
+          flag=1;
+        }
+        else
+        {
+          if(user.length==0)
+          {
+                    
+                    document.getElementById("errormsg").innerHTML="Username cannot be empty";
+          }
+                  if(user.length>10)
+                  {
+                       document.getElementById("errormsg").innerHTML="Username must occupy minimum 3 to maximum 5 fields";
+                  }
+                  else
+          {
+    
+                 document.getElementById("errormsg").innerHTML="Username must occupy minimum 3 to maximum 5 fields";
+                  }
+    
+                  flag=0;
+          // alert("invalid user email");
+        }
+        if(email.match(/[@]/g))
+        {
+          flag=1;
+        }
+        else
+        {
+          flag=0;
+          document.getElementById("errormsg1").innerHTML="Not a valid email address";
+          // alert("invalid user email");
+        }
+        if((number.match(/[0-9]/g))&&(number.length==10))
+        {
+          flag=1;
+        }
+        else
+        {
+          flag=0;
+          document.getElementById("errormsg2").innerHTML="Not a valid mobile number";
+          // alert("invalid number");
+        }
+    
+      
+     
+            
+            if(flag==1)
+            {
+              document.getElementById("result").style.display="block";
+            
+        document.getElementById("user1").innerHTML=user;
+        document.getElementById("email1").innerHTML=email;
+        document.getElementById("number1").innerHTML=number;
+        document.getElementById("location1").innerHTML=location;
+        document.getElementById("rating1").innerHTML=rating;
+    
+      }}
+    </script>
 
     
 
