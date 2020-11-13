@@ -19,10 +19,10 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-          
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
-                
+
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
@@ -46,7 +46,7 @@
               </div>
             </div>
           </nav>
-          
+
           <div class="container-fluid">
             <div class="row justify-content-center" style="background-color: #1d1d1f;">
               <h2 style="color: #fbfbfd; margin-top: 5px;">Please fill you details</h2>
@@ -56,7 +56,7 @@
           <div class="row justify-content-center" style="padding-top: 10px;">
             <form>
               <fieldset>
-              
+
                 <table>
                   <tr>
                 <td><label> Username:<span class="man" style="color: red;">*</span>:</label></td>
@@ -90,7 +90,7 @@
                 <input class="form" id="location" type="text" placeholder="Location">
                 </td>
               </tr>
-                 
+
                 <tr>
                   <td>
                 <label>Rating:</label></td>
@@ -107,7 +107,7 @@
                <tr>
                  <td><label>Suggestion:</label></td>
                  <td> <textarea class="commtext" id="w3review" name="w3review" rows="1" >
-            
+
             </textarea></td>
                </tr>
             </table>
@@ -116,14 +116,14 @@
                 <span></span> Sign Me Up!
              </button>
             </div>
-            
+
           </fieldset>
             </form>
 
           </div>
-          
-        
-        
+
+
+
         <div class="jumbotron">
           <div class="row justify-content-center">
             <div class="container">
@@ -160,16 +160,16 @@
             </div>
           </div>
         </div>
-        
-
-            
-             
 
 
 
 
 
-        
+
+
+
+
+
            <!-- Footer -->
            <div class="container-fluid" id="foot">
             <div class="row justify-content-center">
@@ -183,17 +183,17 @@
           </div>
           <div class="row justify-content-center" >
             <span style="color: white;"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp 040-24265678</span>
-          
+
           </div>
           <div class="row justify-content-center" >
             <span style="color: white;"><i class="fa fa-copyright" aria-hidden="true"></i>&nbsp Carrows Foods</span>
           </div>
-            
-          </div> 
+
+          </div>
 	<!-- ./Footer -->
 
-  
-        
+
+
 
 
 
@@ -206,7 +206,7 @@
     <script>
       function validate()
       {
-           
+
            let user=document.getElementById("user").value;
            let email=document.getElementById("email").value;
            let number=document.getElementById("number").value;
@@ -216,17 +216,20 @@
         let sheldon=1;
         let leonard=1;
         let penny=1;
-    
+
         if((user.length>=3)&&(user.length<=10))
         {
           sheldon=1;
+           document.getElementById("errormsg").innerHTML="";
+          document.getElementById("errormsg5").innerHTML="";
         }
         else
         {
           if(user.length==0)
           {
-                    
+
                     document.getElementById("errormsg").innerHTML="Username field cannot be empty";
+                     document.getElementById("errormsg5").innerHTML="";
           }
                   else if(user.length>10)
                   {
@@ -235,16 +238,17 @@
                   }
                   else
           {
-    
+
                        document.getElementById("errormsg").innerHTML="Username must occupy minimum";
                        document.getElementById("errormsg5").innerHTML="3 to maximum 5 fields";
                   }
-    
+
                   sheldon=0;
         }
         if(email.match(/[@]/g))
         {
           leonard=1;
+          document.getElementById("errormsg1").innerHTML="";
         }
         else
         {
@@ -259,6 +263,7 @@
         if((number.match(/[0-9]/g))&&(number.length==10))
         {
           penny=1;
+            document.getElementById("errormsg2").innerHTML="";
         }
         else
         {
@@ -270,26 +275,26 @@
           }
           penny=0;
         }
-    
-      
-     
-            
+
+
+
+
             if(sheldon==1 && leonard==1 && penny==1)
             {
               document.getElementById("result").style.display="block";
-            
+
         document.getElementById("display1").innerHTML=user;
         document.getElementById("display2").innerHTML=email;
         document.getElementById("display3").innerHTML=number;
         document.getElementById("display4").innerHTML=location;
         document.getElementById("display5").innerHTML=rating;
 
-    
+
       }}
     </script>
 
-    
 
 
-    
+
+
 </html>
